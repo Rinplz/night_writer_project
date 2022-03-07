@@ -21,7 +21,7 @@ RSpec.describe Interface do
 
     it 'can print' do
       expect(@interface1.creation_message).to include(File.basename(test_out_file.path))
-      expect(@interface1.creation_message).to include(test_in_file.read.length)
+      expect(@interface1.creation_message).to include(test_in_file.read.length.to_s)
     end
 
 
@@ -46,7 +46,7 @@ RSpec.describe Interface do
 
     it 'can print' do
       expect(@interface2.creation_message).to include(File.basename(test_out_file.path))
-      expect(@interface1.creation_message).to include(test_in_file.read.length)
+      expect(@interface2.creation_message).to include(test_in_file.read.length.to_s)
     end
 
   end
