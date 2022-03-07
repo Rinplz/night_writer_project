@@ -21,6 +21,7 @@ RSpec.describe Interface do
 
     it 'can print' do
       expect(@interface1.creation_message).to include(File.basename(test_out_file.path))
+      expect(@interface1.creation_message).to include(test_in_file.read.length)
     end
 
 
@@ -29,13 +30,13 @@ RSpec.describe Interface do
   context 'given chicken.txt' do
 
     test_in_file = Tempfile.new('message.txt')
-    test_in_file.write('hello world')
-    test_out_file = Tempfile.new('braille.txt')
+    test_in_file.write('chicken is good')
+    test_out_file = Tempfile.new('chicken.txt')
     let(:arg){[test_in_file,test_out_file]}
 
 
     before (:each) do
-      @interface1 = Interface.new(arg)
+      @interface2 = Interface.new(arg)
     end
 
     after do
@@ -44,7 +45,8 @@ RSpec.describe Interface do
     end
 
     it 'can print' do
-      expect(@interface1.creation_message).to include(File.basename(test_out_file.path))
+      expect(@interface2.creation_message).to include(File.basename(test_out_file.path))
+      expect(@interface1.creation_message).to include(test_in_file.read.length)
     end
 
   end
