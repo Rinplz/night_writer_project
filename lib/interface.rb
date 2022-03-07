@@ -1,9 +1,11 @@
 class Interface
 
-  def initialize
+  def initialize(args)
+    @file_name = args[1]
   end
 
   def creation_message
-    p "Created 'braille.txt' containing 256 characters"
+    p "Created '#{@file_name}' containing 256 characters"
   end
+
 end
