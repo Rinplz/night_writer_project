@@ -3,7 +3,6 @@ class Interface
   def initialize(args)
     @output_file_path = args[1].path
     @input_file_path = args[0].path
-    @output_file_name = File.basename(args[1].path)
   end
 
   def character_counter
@@ -12,7 +11,7 @@ class Interface
   end
 
   def creation_message
-    p "Created '#{@output_file_name}' containing #{character_counter} characters"
+    p "Created '#{File.basename(@output_file_path)}' containing #{character_counter} characters"
   end
 
 end
