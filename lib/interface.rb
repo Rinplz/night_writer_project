@@ -1,8 +1,19 @@
+require_relative 'file_create'
 class Interface
 
   def initialize(args)
-    @output_file_path = args[1].path
-    @input_file_path = args[0].path
+    @args = args
+    @output_file_path = output_file
+    @input_file_path = args[0]
+  end
+
+  def output_file
+    if File.exist?(@args[1]) == true
+      return @args[1]
+    else
+      file_creator = FileCreate.new(@args)
+      return file_creator.create.path
+    end
   end
 
   def character_counter
