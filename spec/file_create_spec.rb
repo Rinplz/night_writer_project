@@ -1,5 +1,5 @@
-require './lib/interface'
 require './lib/file_create'
+require 'tempfile'
 
 RSpec.describe FileCreate do
 
@@ -9,6 +9,10 @@ RSpec.describe FileCreate do
 
   before (:each) do
     @file = FileCreate.new(arguements)
+  end
+
+  after do
+    test_in_file.unlink
   end
 
   it 'can create a new file' do
