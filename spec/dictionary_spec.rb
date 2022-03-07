@@ -7,6 +7,6 @@ RSpec.describe Dictionary do
   end
 
   it 'exists' do
-    expect(@dictionary).to be_a(Class)
+    expect(@dictionary.translation[:a]).to eq([["O . "],[". . "],[". . "]])
   end
 end
