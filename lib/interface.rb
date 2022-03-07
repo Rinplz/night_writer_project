@@ -1,7 +1,7 @@
 class Interface
 
   def initialize(args)
-    @file_name = args[1]
+    @file_name = File.basename(args[1].path)
   end
 
   def creation_message
