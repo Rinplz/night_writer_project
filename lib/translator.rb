@@ -19,6 +19,14 @@ class Translator
     translated_string
   end
 
+  def translate_to_roman
+    translated_string = ''
+    format_for_roman.each_slice(3) do |index|
+      translated_string << @translations.translation.key(index)
+    end
+    translated_string
+  end
+
   def format_for_braille
     @to_translate.scan(/.{1,40}/)
   end
