@@ -7,7 +7,8 @@ RSpec.describe Translator do
     @translated_string1 = Translator.new("a")
     @translated_string2 = Translator.new("hello world")
     @translated_string3 = Translator.new("the quick brown fox jumps over the lazy dog")
-    @translated_braille = Translator.new("0.....")
+    @translated_braille1 = Translator.new("0.\n..\n..")
+    @translated_braille2 = Translator.new("0.0.0.0.0.\n00.00.0..0\n....0.0.0.\n")
   end
 
   it 'can translate 1 letter to braille' do
@@ -24,6 +25,11 @@ RSpec.describe Translator do
   end
 
   it 'can format a single braille letter for roman' do
-    expect(@translated_braille.format_for_roman).to eq(['0.','..','..'])
+    expect(@translated_braille1.format_for_roman).to eq(['0.','..','..'])
   end
+
+  it 'can format more than 1 braille letter for roman' do
+    expect(@translated_braille2.format_for_roman).to eq(['0.','00','..','0.','.0','..','0.','0.','0.','0.','0.','0.','0.','.0','0.'])
+  end
+
 end
