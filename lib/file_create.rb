@@ -1,4 +1,5 @@
 require_relative 'translator'
+require 'pry'
 class FileCreate
   def initialize(args)
     @input_file = args[0]
@@ -15,7 +16,7 @@ class FileCreate
 
   def edited_string(string)
     new_string = Translator.new(string)
-    if string.count('.0') == string.length
+    if string.count(".0\n") == string.length
       new_string.translate_to_roman
     else
       new_string.translate_to_braille

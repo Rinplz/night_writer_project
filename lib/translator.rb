@@ -34,11 +34,12 @@ class Translator
   def format_for_roman
     formatted_string = []
     braille = @to_translate.scan(/.{1,2}/)
-    braille_to_roman_count = braille_letter_count
-    braille_to_roman_count.times do |n|
-      formatted_string << braille[n]
-      formatted_string << braille[(n) + braille_to_roman_count]
-      formatted_string << braille[(n) + (braille_to_roman_count*2)]
+    braille_letter_count.each do |index|
+      index.times do |n|
+        formatted_string << braille[n]
+        formatted_string << braille[(n) + index]
+        formatted_string << braille[(n) + (index*2)]
+      end
     end
     formatted_string
   end
@@ -46,10 +47,16 @@ class Translator
   def braille_letter_count
     count = @to_translate.scan(/.{1,2}/).length
     count = count / 3
-    if count > 40
-      count = 40
+    if count <= 40
+    final_count = [count]
+    elsif count > 40
+      while count >= 40
+        final_count << 40
+        count - 40
+      end
+      final_count << count
     end
-    count
+    final_count
   end
 
 end
