@@ -1,5 +1,6 @@
 require './lib/interface'
 require 'tempfile'
+require_relative 'spec_helper'
 
 RSpec.describe Interface do
 

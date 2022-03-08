@@ -1,5 +1,5 @@
 require './lib/translator'
-require 'pry'
+require_relative 'spec_helper'
 
 RSpec.describe Translator do
 

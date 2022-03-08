@@ -1,6 +1,6 @@
 require './lib/file_create'
 require 'tempfile'
-require 'pry'
+require_relative 'spec_helper'
 
 RSpec.describe FileCreate do
 

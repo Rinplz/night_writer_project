@@ -1,4 +1,5 @@
 require './lib/dictionary'
+require_relative 'spec_helper'
 
 RSpec.describe Dictionary do
 
