@@ -5,6 +5,8 @@ RSpec.describe Translator do
 
   before (:each) do
     @translated_string1 = Translator.new("a")
+    @translated_string1_2 = Translator.new("A")
+    @translated_string1_3 = Translator.new("A!")
     @translated_string2 = Translator.new("hello world")
     @translated_string3 = Translator.new("the quick brown fox jumps over the lazy dog")
     @translated_braille1 = Translator.new("0.\n..\n..")
@@ -35,6 +37,14 @@ RSpec.describe Translator do
   it 'can translate from braille' do
     expect(@translated_braille1.translate_to_roman).to eq("a")
     expect(@translated_braille2.translate_to_roman).to eq("hello")
+  end
+
+  it 'can translate 1 upcase letter to braille' do
+    expect(@translated_string1_2.translate_to_braille).to eq("0.\n..\n..\n")
+  end
+
+  it 'can ignore punctuation' do
+    expect(@translated_string1_3.translate_to_braille).to eq("0.\n..\n..\n")
   end
 
 end
