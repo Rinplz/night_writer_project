@@ -9,13 +9,13 @@ class FileCreate
     dir = File.dirname(@input_file)
     message = File.open(@input_file)
     new_file = File.open(dir + "/" + @output_file_name, "w")
-    new_file.write("#{braille_string(message.read)}")
+    new_file.write("#{edited_string(message.read)}")
     return new_file
   end
 
-  def braille_string(string)
+  def edited_string(string)
     new_string = Translator.new(string)
-    new_string.translate
+    new_string.translate_to_braille
   end
 
 end

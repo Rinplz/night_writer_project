@@ -6,9 +6,9 @@ class Translator
     @translations = Dictionary.new
   end
 
-  def translate
+  def translate_to_braille
     translated_string = ''
-    format.each do |index|
+    format_for_braille.each do |index|
       3.times do |count|
         index.each_char do |character|
           translated_string << @translations.translation[character][count]
@@ -19,7 +19,7 @@ class Translator
     translated_string
   end
 
-  def format
+  def format_for_braille
     @to_translate.scan(/.{1,40}/)
   end
 end
