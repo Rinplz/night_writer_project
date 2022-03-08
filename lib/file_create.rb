@@ -1,6 +1,5 @@
-require_relative 'dictionary'
-class FileCreate
 
+class FileCreate
   def initialize(args)
     @input_file = args[0]
     @output_file_name = args[1]

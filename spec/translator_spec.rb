@@ -7,6 +7,6 @@ RSpec.describe Translator do
   end
 
   it 'can translate 1 letter' do
-    expect(@translated_string1.translate).to eq('O . \n. . \n. . ')
+    expect(@translated_string1.translate).to eq("O . \n. . \n. . \n")
   end
 end
