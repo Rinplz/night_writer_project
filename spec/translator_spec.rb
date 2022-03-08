@@ -32,4 +32,9 @@ RSpec.describe Translator do
     expect(@translated_braille2.format_for_roman).to eq(['0.','00','..','0.','.0','..','0.','0.','0.','0.','0.','0.','0.','.0','0.'])
   end
 
+  it 'can translate to braille' do
+    expect(@translated_braille1.translate_to_roman).to eq("a")
+    expect(@translated_braille2.translate_to_roman).to eq("hello")
+  end
+
 end
