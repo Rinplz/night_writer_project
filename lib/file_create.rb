@@ -16,7 +16,7 @@ class FileCreate
   def edited_string(string)
     new_string = Translator.new(string)
     if string.count('.0') == string.length
-      new_string.translate_to_string
+      new_string.translate_to_roman
     else
       new_string.translate_to_braille
     end
