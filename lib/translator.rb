@@ -28,7 +28,7 @@ class Translator
   end
 
   def format_for_braille
-    @to_translate.scan(/.{1,40}/)
+    @to_translate.downcase.tr('^a-z ','').scan(/.{1,40}/)
   end
 
   def format_for_roman
