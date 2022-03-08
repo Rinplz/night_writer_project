@@ -22,4 +22,17 @@ class Translator
   def format_for_braille
     @to_translate.scan(/.{1,40}/)
   end
+
+  def format_for_roman
+    formatted_string = []
+    braille = @to_translate.scan(/.{1,2}/)
+    braille_to_roman_count = braille.length / 3
+    braille_to_roman_count.times do |n|
+      formatted_string << braille[n]
+      formatted_string << braille[(n) + braille_to_roman_count]
+      formatted_string << braille[(n) + (braille_to_roman_count*2)]
+    end
+    formatted_string
+  end
+
 end

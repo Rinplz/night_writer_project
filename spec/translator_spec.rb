@@ -1,4 +1,5 @@
 require './lib/translator'
+require 'pry'
 
 RSpec.describe Translator do
 
@@ -6,6 +7,7 @@ RSpec.describe Translator do
     @translated_string1 = Translator.new("a")
     @translated_string2 = Translator.new("hello world")
     @translated_string3 = Translator.new("the quick brown fox jumps over the lazy dog")
+    @translated_braille = Translator.new("0.....")
   end
 
   it 'can translate 1 letter to braille' do
@@ -21,7 +23,7 @@ RSpec.describe Translator do
     expect(@translated_string3.format_for_braille).to eq(['the quick brown fox jumps over the lazy ', 'dog'])
   end
 
-  it 'can format a single input for roman' do
-    expect(@translated_braille.format_for_roman).to eq(['0.\n..\n..\n'])
+  it 'can format a single braille letter for roman' do
+    expect(@translated_braille.format_for_roman).to eq(['0.','..','..'])
   end
 end
