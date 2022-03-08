@@ -19,5 +19,9 @@ RSpec.describe FileCreate do
   it 'can create a new file' do
     expect(@file.create).to be_a(File)
   end
-  
+
+  it 'can call Translator' do
+    expect(@file.braille_string('hello')).to be_a(String)
+  end
+
 end
