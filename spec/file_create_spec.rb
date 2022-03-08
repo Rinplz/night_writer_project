@@ -1,5 +1,6 @@
 require './lib/file_create'
 require 'tempfile'
+require 'pry'
 
 RSpec.describe FileCreate do
 
@@ -21,7 +22,12 @@ RSpec.describe FileCreate do
   end
 
   it 'can call Translator' do
-    expect(@file.braille_string('hello')).to be_a(String)
+    expect(@file.edited_string('hello world')).to eq("0.0.0.0.0....00.0.0.00\n00.00.0..0..00.0000..0\n....0.0.0....00.0.0...\n")
+  end
+
+  it 'can identify braille' do
+    expect(@file.edited_string('0.....')).to eq("a")
+
   end
 
 end
