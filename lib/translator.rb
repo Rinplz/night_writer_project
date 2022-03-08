@@ -16,4 +16,8 @@ class Translator
     end
     translated_string
   end
+
+  def format
+    @to_translate.scan(/.{1,40}/)
+  end
 end
