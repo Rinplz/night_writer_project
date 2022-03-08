@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-08T15:50:04-06:00">2022-03-08T15:50:04-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-08T16:19:32-06:00">2022-03-08T16:19:32-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  99.28%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.17
+         3.14
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>138</b> relevant lines,
-    <span class="green"><b>137</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed. </span>
+    <b>140</b> relevant lines,
+    <span class="green"><b>140</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  99.28%
+  100.0%
 </span>
 )
   </div>
@@ -83,11 +83,11 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#50f3a9fc397aee71c556bab6399d636d99bc83f8" class="src_link" title="lib/interface.rb">lib/interface.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">95.00 %</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">36</td>
             <td class="cell--number">20</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">1</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">0</td>
             <td class="cell--number">1.90</td>
             
           </tr>
@@ -117,11 +117,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e2335820c45bd958c60b10fd58858d0443551cab" class="src_link" title="spec/interface_spec.rb">spec/interface_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">55</td>
-            <td class="cell--number">30</td>
-            <td class="cell--number">30</td>
+            <td class="cell--number">57</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">32</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.07</td>
+            <td class="cell--number">1.06</td>
             
           </tr>
         
@@ -475,7 +475,7 @@
     <h3>lib/interface.rb</h3>
     <h4>
       <span class="green">
-  95.0%
+  100.0%
 </span>
 
       lines covered
@@ -485,8 +485,8 @@
 
     <div class="t-line-summary">
       <b>20</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -761,8 +761,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="25">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="2" data-linenumber="25">
+            <span class="hits">2</span>
             
 
             
@@ -783,8 +783,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="27">
-            
+          <li class="covered" data-hits="2" data-linenumber="27">
+            <span class="hits">2</span>
             
 
             
@@ -1908,8 +1908,8 @@
     
 
     <div class="t-line-summary">
-      <b>30</b> relevant lines.
-      <span class="green"><b>30</b> lines covered</span> and
+      <b>32</b> relevant lines.
+      <span class="green"><b>32</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2097,13 +2097,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      allow(File).to receive(:read).and_return(test_in_file.read)</code>
           </li>
         </div>
       
@@ -2114,18 +2114,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="19">
+            
             
 
             
 
-            <code class="ruby">    after do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2136,7 +2136,7 @@
 
             
 
-            <code class="ruby">      test_in_file.unlink</code>
+            <code class="ruby">    after do</code>
           </li>
         </div>
       
@@ -2147,18 +2147,18 @@
 
             
 
-            <code class="ruby">      test_out_file.unlink</code>
+            <code class="ruby">      test_in_file.unlink</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      test_out_file.unlink</code>
           </li>
         </div>
       
@@ -2169,18 +2169,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="24">
+            
             
 
             
 
-            <code class="ruby">    it &#39;can print&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2191,7 +2191,7 @@
 
             
 
-            <code class="ruby">      expect(@interface1.creation_message).to include(File.basename(test_out_file.path))</code>
+            <code class="ruby">    it &#39;can print&#39; do</code>
           </li>
         </div>
       
@@ -2202,18 +2202,18 @@
 
             
 
-            <code class="ruby">      expect(@interface1.creation_message).to include(test_in_file.read.length.to_s)</code>
+            <code class="ruby">      expect(@interface1.creation_message).to include(File.basename(test_out_file.path))</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(@interface1.creation_message).to include(&#39;11&#39;)</code>
           </li>
         </div>
       
@@ -2224,7 +2224,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2246,7 +2246,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2257,12 +2257,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="33">
             <span class="hits">1</span>
             
 
@@ -2273,24 +2284,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    test_in_file = Tempfile.new(&#39;message.txt&#39;)</code>
           </li>
         </div>
       
@@ -2301,7 +2301,7 @@
 
             
 
-            <code class="ruby">    test_in_file.write(&#39;chicken is good&#39;)</code>
+            <code class="ruby">    test_in_file = Tempfile.new(&#39;message.txt&#39;)</code>
           </li>
         </div>
       
@@ -2312,12 +2312,23 @@
 
             
 
+            <code class="ruby">    test_in_file.write(&quot;0.\n..\n..&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    test_out_file = &#39;chicken.txt&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="37">
+          <li class="covered" data-hits="2" data-linenumber="38">
             <span class="hits">2</span>
             
 
@@ -2328,24 +2339,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    before (:each) do</code>
           </li>
         </div>
       
@@ -2356,29 +2356,29 @@
 
             
 
+            <code class="ruby">    before (:each) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      @interface2 = Interface.new(arg)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      allow(File).to receive(:read).and_return(test_in_file.read)</code>
           </li>
         </div>
       
@@ -2389,12 +2389,34 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
             <span class="hits">1</span>
             
 
@@ -2405,7 +2427,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="47">
             <span class="hits">1</span>
             
 
@@ -2416,7 +2438,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -2427,35 +2449,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;can call FileCreate&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(@interface2.creation_message).to include(File.basename(test_out_file))</code>
           </li>
         </div>
       
@@ -2466,29 +2466,29 @@
 
             
 
-            <code class="ruby">      expect(@interface2.creation_message).to include(test_in_file.read.length.to_s)</code>
+            <code class="ruby">    it &#39;can call FileCreate&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(@interface2.creation_message).to include(File.basename(test_out_file))</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      expect(@interface2.creation_message).to include(&#39;1&#39;)</code>
           </li>
         </div>
       
@@ -2499,7 +2499,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2516,6 +2516,28 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
