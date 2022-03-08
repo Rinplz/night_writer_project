@@ -26,7 +26,7 @@ RSpec.describe FileCreate do
   end
 
   it 'can identify braille' do
-    expect(@file.edited_string('0.....')).to eq("a")
+    expect(@file.edited_string("0.\n..\n..")).to eq("a")
 
   end
 
